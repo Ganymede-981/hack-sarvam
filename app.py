@@ -567,40 +567,48 @@ with tab_copilot:
     st.markdown("### 🤖 Natural Language Query Copilot")
     st.markdown("Query the verified database using plain English. The agent converts business intent into safe SQLite SELECT queries.")
 
+    if "copilot_query" not in st.session_state:
+        st.session_state["copilot_query"] = "Which vendor did we pay the most?"
+
     st.markdown("**Suggested Quick Inquiries:**")
     quick_q_cols = st.columns(4)
-    preset_q = ""
     with quick_q_cols[0]:
-        if st.button("🏆 Highest spend vendor?", use_container_width=True):
-            preset_q = "Which vendor did we pay the most?"
+        if st.button("🏆 Highest spend vendor?", key="btn_top_vendor"):
+            st.session_state["copilot_query"] = "Which vendor did we pay the most?"
+            st.rerun()
     with quick_q_cols[1]:
-        if st.button("🚩 Show flagged documents", use_container_width=True):
-            preset_q = "Show all documents that require audit review"
+        if st.button("🚩 Show flagged documents", key="btn_flagged"):
+            st.session_state["copilot_query"] = "Show all documents that require audit review"
+            st.rerun()
     with quick_q_cols[2]:
-        if st.button("📊 Spend by vendor", use_container_width=True):
-            preset_q = "Show total spend broken down by each vendor"
+        if st.button("📊 Spend by vendor", key="btn_spend"):
+            st.session_state["copilot_query"] = "Show total spend broken down by each vendor"
+            st.rerun()
     with quick_q_cols[3]:
-        if st.button("🔍 Invoices over ₹1 Lakh", use_container_width=True):
-            preset_q = "Find all invoices with total greater than 100000"
+        if st.button("🔍 Invoices over ₹1 Lakh", key="btn_high_val"):
+            st.session_state["copilot_query"] = "Find all invoices with total greater than 100000"
+            st.rerun()
 
     user_query = st.text_input(
         "Enter question:",
-        value=preset_q if preset_q else "",
+        value=st.session_state.get("copilot_query", ""),
         placeholder="e.g. Which vendor did we pay the most this month?",
-        label_visibility="collapsed"
+        label_visibility="collapsed",
+        key="query_text_input"
     )
 
-    if st.button("⚡ Execute Query", type="primary") or (preset_q and user_query):
-        if not user_query.strip():
+    if st.button("⚡ Execute Query", type="primary") or user_query:
+        query_to_run = user_query.strip() if user_query.strip() else st.session_state.get("copilot_query", "")
+        if not query_to_run:
             st.warning("Please enter a question.")
         else:
-            with st.spinner("Translating natural language intent to SQL..."):
+            with st.spinner("Translating natural language intent to SQL with Sarvam AI..."):
                 schema_desc = """
                 Table documents (id, filename, doc_type, vendor, doc_number, date, currency, total, needs_review, review_reason)
                 Table line_items (id, doc_id, description, qty, unit_price, amount)
                 Table alerts_log (id, doc_id, rule_name, severity, message, created_at)
                 """
-                sql = sarvam_client.generate_sql_from_question(user_query, schema_desc, api_key=config.SARVAM_API_KEY)
+                sql = sarvam_client.generate_sql_from_question(query_to_run, schema_desc, api_key=config.SARVAM_API_KEY)
                 
                 c_sql, c_res = st.columns([1, 1.4], gap="medium")
                 with c_sql:
@@ -614,7 +622,7 @@ with tab_copilot:
                         if res_df.empty:
                             st.info("Query returned 0 rows.")
                         else:
-                            st.dataframe(res_df, use_container_width=True)
+                            st.dataframe(res_df)
                     except Exception as e:
                         st.error(f"SQL Execution Error: {e}")
 
