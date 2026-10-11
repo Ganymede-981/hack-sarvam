@@ -55,22 +55,3 @@ SLACK_WEBHOOK_URL=https://hooks.slack.com/services/... (optional)
 streamlit run app.py
 ```
 
----
-
-## 🎬 2-Minute Demo Script
-
-1. **Load Pre-Packaged Dataset:**
-   - In the sidebar, click **"📥 Load 4 Samples"**.
-   - Notice all 4 diverse documents ingested simultaneously: Indic bilingual bill, high-value consulting invoice, audit compliance report, and an invoice with a line item mismatch.
-2. **Explore Executive BI Dashboard (Tab 2):**
-   - Review high-level KPIs (Total Spend, Flagged Count, Critical Approvals).
-   - Show interactive Plotly charts: Horizontal spend by vendor and classification donut chart.
-   - Click **"📥 Export BI-Ready CSV"** to demonstrate Power BI / Tableau readiness.
-   - Expand the **"🔎 Line Items Drill-Down"** to show individual item records.
-3. **Trigger Workflow Rules & Approvals (Tab 4):**
-   - Point out the **`CRITICAL`** approval triggered on the ₹2.45L TCS invoice.
-   - Point out the **`WARNING`** flagged on the Swiggy invoice where line items sum differs from printed grand total.
-   - Point out the **`INFO`** badge for native Indic script recognition on the Reliance Retail invoice.
-4. **Natural Language Query Copilot (Tab 3):**
-   - Click one of the prompt chips (e.g., *"🏆 Highest spend vendor?"* or *"🚩 Show flagged documents"*).
-   - Watch the agent translate natural language to safe SQLite queries and execute them live.
