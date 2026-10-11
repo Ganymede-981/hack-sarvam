@@ -1,0 +1,20 @@
+BUNDL TECHNOLOGIES PRIVATE LIMITED (SWIGGY)
+Corporate Catering Division, Bangalore, Karnataka
+GSTIN: 29AAGCB5982C1ZS
+TAX INVOICE FOR CORPORATE MEALS
+
+Invoice Ref: SWIG-CORP-44021
+Date: 2026-03-10
+Billed To: Hackathon AI Labs, Bengaluru
+
+Description | Qty | Unit Price | Amount
+-------------------------------------------
+Team Hackathon Lunch Thali Pack | 5 | 150 | 750
+Beverages & Tender Coconut Water | 10 | 70 | 700
+
+Calculated Line Items Total: ₹1,450.00
+Platform & Handling Charges (Unlisted): ₹400.00
+Grand Total: ₹1,850.00
+
+Note: Line items sum to 1,450 but printed Grand Total is 1,850 due to omitted charge line.
+Status: Needs Audit Review

@@ -1,0 +1,21 @@
+INTERNAL AUDIT & FINANCIAL COMPLIANCE REPORT
+Quarter: Q3 FY2025-26
+Report Identifier: AUDIT-REP-2026-Q3
+Date of Release: 2026-03-01
+
+Executive Summary:
+This quarterly compliance audit evaluated 142 vendor accounts across technology and operational expenses.
+Key Findings:
+1. Technology Vendor Disbursements: Total ₹5,40,000 across 12 approved partners.
+2. Compliance Rating: 94.2% invoices possessed valid GSTIN validation.
+3. Unreconciled Line Items: Identified in 3 food and catering disbursements.
+
+Category | Qty | Unit Price | Amount
+-------------------------------------------
+Software Licenses and Cloud Compute | 1 | 320000 | 320000
+Consultancy & Technical Advisory | 1 | 180000 | 180000
+Travel and Operations Reimbursements | 1 | 40000 | 40000
+
+Total Audited Spend: ₹5,40,000.00
+Prepared by: Senior Auditor, Internal Compliance Cell
+Reviewed by: Head of Financial Operations

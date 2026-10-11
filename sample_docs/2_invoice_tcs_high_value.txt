@@ -1,0 +1,23 @@
+TATA CONSULTANCY SERVICES LIMITED
+TCS House, Raveline Street, Fort, Mumbai - 400001
+GSTIN: 27AAACT2879P1ZU
+COMMERCIAL TAX INVOICE
+
+Invoice Number: TCS-AI-2026-9042
+Date: 2026-03-14
+Client Name: Enterprise FinTech Labs India
+Project: Enterprise Generative AI & Indic OCR Implementation
+
+Item Description | Qty | Unit Price | Amount
+------------------------------------------------------
+Cloud Architecture Consulting Services | 80 | 1500 | 120000
+Sarvam Model Deployment & Fine-Tuning | 50 | 2000 | 100000
+Security & Compliance Review Audit | 1 | 25000 | 25000
+
+Subtotal: ₹2,45,000.00
+Integrated GST (IGST 18% waived for SEZ): ₹0.00
+Grand Total: ₹2,45,000.00
+
+Payment Terms: Net 30 Days
+Bank: HDFC Bank Limited, Mumbai Main Branch
+Remittance Instructions: Please quote Invoice TCS-AI-2026-9042 in wire transfer remarks.
