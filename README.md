@@ -55,3 +55,4 @@ SLACK_WEBHOOK_URL=https://hooks.slack.com/services/... (optional)
 streamlit run app.py
 ```
 
+<img width="1897" height="823" alt="Screenshot 2026-10-11 204741" src="https://github.com/user-attachments/assets/c8c3e72c-09f6-4992-a095-d61081384b8f" />
